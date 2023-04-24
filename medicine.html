@@ -10,10 +10,113 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .section {
+            background-color: peachpuff;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-style: oblique;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+            font-size: 20px;
+            font-style: oblique;
+        }
+
+        ul.symptoms {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        li.symptom {
+            margin-bottom: 10px;
+            color: black;
+            font-size: 20px;
+            line-height: 1.5;
+            font-style: oblique;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #37b3d9;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+            font-style: oblique;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #007ea7;
+        }
+
+        /* added spacing between medicine and symptoms section */
+        .section-spacing {
+            height: 50px;
+        }
+
+        /* custom styles */
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: oblique;
+            background-color: #f7f7f7;
+        }
+
+        ul.symptoms label::before {
+            content: "•";
+            color: #37b3d9;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-weight: bold;
+        }
+
+        /* responsive styles */
+        @media (max-width: 767px) {
+            .section {
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg headnav">
         <a class="navbar-brand" href="index.html">
             <img class="logoimg" src="img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -40,9 +143,9 @@
                     <div class="dropdown">
                         <a href="#" class="nav-link">PERIOD DIARY</a>
                         <div class="dropdown-content">
-                            <a href="ptracker.html">period tracker</a>
+                            <a href="ptracker.html">Period tracker</a>
                             <!-- <a href="qualitycheck.html">Quality check</a> -->
-                            <a href="menopause.html">menupause</a>
+                            <a href="menopause.html">MenOpause</a>
                         </div>
                     </div>
                 </li>
@@ -55,7 +158,7 @@
                         <div class="dropdown-content">
                             <a href="helpcare.html">Help & care</a>
                             <a href="medicine.html">Medicine</a>
-                            <a href="pescription.html">pescription</a>
+                            <!-- <a href="pescription.html">pescription</a> -->
                         </div>
                     </div>
                 </li>
@@ -69,55 +172,294 @@
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="colornav">
         <div class="evebanner">
             <img src="img/banner/medicine.png" alt="">
         </div>
-        <footer class="footer-16371">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-9 text-center">
-                        <div class="footer-site-logo mb-4">
-                            <a class="navbar-brand" href="index.html">
-                                <img class="logoimg" src="img/logo.png" alt=""></a>
-                            <br>
-                            <a href="#">Blood-Bloom</a>
-                        </div>
-                        <ul class="list-unstyled nav-links mb-5">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">period diary</a></li>
-                            <li><a href="#">Quality check</a></li>
-                            <li><a href="#">Awarness</a></li>
-                            <li><a href="#">Medicine</a></li>
-                            <li><a href="#">contact</a></li>
+        <h1 class="text-center p-3">Symptoms Form</h1>
+        <div class="section">
+            <div class="section-title">Symptoms:</div>
+            <form action="" method="post">
+                <label for="Symptoms">Select your symptoms:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>symptom 1</option>
+                    <option value="Itching">Itching</option>
+                    <option value="Skin Rash">Skin RashS</option>
+                    <option value="Nodal skin eruption">Nodal skin eruption</option>
+                    <option value="Watering from eyes">Watering from eyes</option>
+                    <option value="Shivering">Shivering</option>
+                    <option value="Acidity">Acidity</option>
+                    <option value="Vomiting">Vomiting</option>
+                    <option value="cough">cough</option>
+                    <option value="Chest pain">Chest Pain</option>
+                    <option value="Nausea">Nausea</option>
+                    <option value="Loss of apetite">Loss of apetite</option>
+                    <option value="Burning micturitior">Burning micturitior</option>
+                    <option value="Internal Itching">Internal Itching</option>
+                    <option value="Lethargy">Lethargy</option>
+                    <option value="Obesity">Obesity</option>
+                    <option value="Dehydration">Dehydration</option>
+                    <option value="Irregular periods">Irregular Periods</option>
+                    <option value="Diarrhoea">Diarrhoea</option>
+                    <option value="High fever">High fever</option>
+                    <option value="Dizziness">Dizziness</option>
+                    <option value="Lack of concentration">Lack of concentration</option>
+                    <option value="Visual disturbance">Visual disturbance</option>
+                    <option value="Weakness">Weakness</option>
+                    <option value="Dark urine">Dark urine</option>
+                    <option value="Abdominal pain">Abdominal pain</option>
+                    <option value="Fatigue">Fatigue</option>
+                    <option value="Joint pain">Joint pain</option>
+                    <option value="Red spots on body">Red spots on body</option>
+                    <option value="Stomach bleeding">Stomach bleeding</option>
+                    <option value="Acute liver">Acute liver</option>
+                    <option value="Fluid overload">Fluid overload</option>
+                    <option value="Blood in sputum">Blood in sputum</option>
+                    <option value="Muscle pain">Muscle pain</option>
+                    <option value="Runny nose">Runny nose</option>
+                    <option value="Throat irritation">Throat irritation</option>
+                    <option value="Irritation in anus">Irritation in anus</option>
+                    <option value="Cramps">Cramps</option>
+                    <option value="Swallen glands">Swallen glands</option>
+                    <option value="Abnormal mensuration">Abnormal mensuration</option>
+                    <option value="Puffy face">Puffy face</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Anxiety">Anxiety</option>
+                </select>
+                <label for="Symptoms">Select your symptoms:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>symptom 2</option>
+                    <option value="Itching">Itching</option>
+                    <option value="Skin Rash">Skin RashS</option>
+                    <option value="Nodal skin eruption">Nodal skin eruption</option>
+                    <option value="Watering from eyes">Watering from eyes</option>
+                    <option value="Shivering">Shivering</option>
+                    <option value="Acidity">Acidity</option>
+                    <option value="Vomiting">Vomiting</option>
+                    <option value="cough">cough</option>
+                    <option value="Chest pain">Chest Pain</option>
+                    <option value="Nausea">Nausea</option>
+                    <option value="Loss of apetite">Loss of apetite</option>
+                    <option value="Burning micturitior">Burning micturitior</option>
+                    <option value="Internal Itching">Internal Itching</option>
+                    <option value="Lethargy">Lethargy</option>
+                    <option value="Obesity">Obesity</option>
+                    <option value="Dehydration">Dehydration</option>
+                    <option value="Irregular periods">Irregular Periods</option>
+                    <option value="Diarrhoea">Diarrhoea</option>
+                    <option value="High fever">High fever</option>
+                    <option value="Dizziness">Dizziness</option>
+                    <option value="Lack of concentration">Lack of concentration</option>
+                    <option value="Visual disturbance">Visual disturbance</option>
+                    <option value="Weakness">Weakness</option>
+                    <option value="Dark urine">Dark urine</option>
+                    <option value="Abdominal pain">Abdominal pain</option>
+                    <option value="Fatigue">Fatigue</option>
+                    <option value="Joint pain">Joint pain</option>
+                    <option value="Red spots on body">Red spots on body</option>
+                    <option value="Stomach bleeding">Stomach bleeding</option>
+                    <option value="Acute liver">Acute liver</option>
+                    <option value="Fluid overload">Fluid overload</option>
+                    <option value="Blood in sputum">Blood in sputum</option>
+                    <option value="Muscle pain">Muscle pain</option>
+                    <option value="Runny nose">Runny nose</option>
+                    <option value="Throat irritation">Throat irritation</option>
+                    <option value="Irritation in anus">Irritation in anus</option>
+                    <option value="Cramps">Cramps</option>
+                    <option value="Swallen glands">Swallen glands</option>
+                    <option value="Abnormal mensuration">Abnormal mensuration</option>
+                    <option value="Puffy face">Puffy face</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Anxiety">Anxiety</option>
+                </select>
+                <label for="Symptoms">Select your symptoms:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>symptom 3</option>
+                    <option value="Itching">Itching</option>
+                    <option value="Skin Rash">Skin RashS</option>
+                    <option value="Nodal skin eruption">Nodal skin eruption</option>
+                    <option value="Watering from eyes">Watering from eyes</option>
+                    <option value="Shivering">Shivering</option>
+                    <option value="Acidity">Acidity</option>
+                    <option value="Vomiting">Vomiting</option>
+                    <option value="cough">cough</option>
+                    <option value="Chest pain">Chest Pain</option>
+                    <option value="Nausea">Nausea</option>
+                    <option value="Loss of apetite">Loss of apetite</option>
+                    <option value="Burning micturitior">Burning micturitior</option>
+                    <option value="Internal Itching">Internal Itching</option>
+                    <option value="Lethargy">Lethargy</option>
+                    <option value="Obesity">Obesity</option>
+                    <option value="Dehydration">Dehydration</option>
+                    <option value="Irregular periods">Irregular Periods</option>
+                    <option value="Diarrhoea">Diarrhoea</option>
+                    <option value="High fever">High fever</option>
+                    <option value="Dizziness">Dizziness</option>
+                    <option value="Lack of concentration">Lack of concentration</option>
+                    <option value="Visual disturbance">Visual disturbance</option>
+                    <option value="Weakness">Weakness</option>
+                    <option value="Dark urine">Dark urine</option>
+                    <option value="Abdominal pain">Abdominal pain</option>
+                    <option value="Fatigue">Fatigue</option>
+                    <option value="Joint pain">Joint pain</option>
+                    <option value="Red spots on body">Red spots on body</option>
+                    <option value="Stomach bleeding">Stomach bleeding</option>
+                    <option value="Acute liver">Acute liver</option>
+                    <option value="Fluid overload">Fluid overload</option>
+                    <option value="Blood in sputum">Blood in sputum</option>
+                    <option value="Muscle pain">Muscle pain</option>
+                    <option value="Runny nose">Runny nose</option>
+                    <option value="Throat irritation">Throat irritation</option>
+                    <option value="Irritation in anus">Irritation in anus</option>
+                    <option value="Cramps">Cramps</option>
+                    <option value="Swallen glands">Swallen glands</option>
+                    <option value="Abnormal mensuration">Abnormal mensuration</option>
+                    <option value="Puffy face">Puffy face</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Anxiety">Anxiety</option>
+                </select>
+                <label for="Symptoms">Select your symptoms:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>symptom 4</option>
+                    <option value="Itching">Itching</option>
+                    <option value="Skin Rash">Skin RashS</option>
+                    <option value="Nodal skin eruption">Nodal skin eruption</option>
+                    <option value="Watering from eyes">Watering from eyes</option>
+                    <option value="Shivering">Shivering</option>
+                    <option value="Acidity">Acidity</option>
+                    <option value="Vomiting">Vomiting</option>
+                    <option value="cough">cough</option>
+                    <option value="Chest pain">Chest Pain</option>
+                    <option value="Nausea">Nausea</option>
+                    <option value="Loss of apetite">Loss of apetite</option>
+                    <option value="Burning micturitior">Burning micturitior</option>
+                    <option value="Internal Itching">Internal Itching</option>
+                    <option value="Lethargy">Lethargy</option>
+                    <option value="Obesity">Obesity</option>
+                    <option value="Dehydration">Dehydration</option>
+                    <option value="Irregular periods">Irregular Periods</option>
+                    <option value="Diarrhoea">Diarrhoea</option>
+                    <option value="High fever">High fever</option>
+                    <option value="Dizziness">Dizziness</option>
+                    <option value="Lack of concentration">Lack of concentration</option>
+                    <option value="Visual disturbance">Visual disturbance</option>
+                    <option value="Weakness">Weakness</option>
+                    <option value="Dark urine">Dark urine</option>
+                    <option value="Abdominal pain">Abdominal pain</option>
+                    <option value="Fatigue">Fatigue</option>
+                    <option value="Joint pain">Joint pain</option>
+                    <option value="Red spots on body">Red spots on body</option>
+                    <option value="Stomach bleeding">Stomach bleeding</option>
+                    <option value="Acute liver">Acute liver</option>
+                    <option value="Fluid overload">Fluid overload</option>
+                    <option value="Blood in sputum">Blood in sputum</option>
+                    <option value="Muscle pain">Muscle pain</option>
+                    <option value="Runny nose">Runny nose</option>
+                    <option value="Throat irritation">Throat irritation</option>
+                    <option value="Irritation in anus">Irritation in anus</option>
+                    <option value="Cramps">Cramps</option>
+                    <option value="Swallen glands">Swallen glands</option>
+                    <option value="Abnormal mensuration">Abnormal mensuration</option>
+                    <option value="Puffy face">Puffy face</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Anxiety">Anxiety</option>
+                </select>
+                <label for="Symptoms">Select your symptoms:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>symptom 4</option>
+                    <option value="Itching">Itching</option>
+                    <option value="Skin Rash">Skin RashS</option>
+                    <option value="Nodal skin eruption">Nodal skin eruption</option>
+                    <option value="Watering from eyes">Watering from eyes</option>
+                    <option value="Shivering">Shivering</option>
+                    <option value="Acidity">Acidity</option>
+                    <option value="Vomiting">Vomiting</option>
+                    <option value="cough">cough</option>
+                    <option value="Chest pain">Chest Pain</option>
+                    <option value="Nausea">Nausea</option>
+                    <option value="Loss of apetite">Loss of apetite</option>
+                    <option value="Burning micturitior">Burning micturitior</option>
+                    <option value="Internal Itching">Internal Itching</option>
+                    <option value="Lethargy">Lethargy</option>
+                    <option value="Obesity">Obesity</option>
+                    <option value="Dehydration">Dehydration</option>
+                    <option value="Irregular periods">Irregular Periods</option>
+                    <option value="Diarrhoea">Diarrhoea</option>
+                    <option value="High fever">High fever</option>
+                    <option value="Dizziness">Dizziness</option>
+                    <option value="Lack of concentration">Lack of concentration</option>
+                    <option value="Visual disturbance">Visual disturbance</option>
+                    <option value="Weakness">Weakness</option>
+                    <option value="Dark urine">Dark urine</option>
+                    <option value="Abdominal pain">Abdominal pain</option>
+                    <option value="Fatigue">Fatigue</option>
+                    <option value="Joint pain">Joint pain</option>
+                    <option value="Red spots on body">Red spots on body</option>
+                    <option value="Stomach bleeding">Stomach bleeding</option>
+                    <option value="Acute liver">Acute liver</option>
+                    <option value="Fluid overload">Fluid overload</option>
+                    <option value="Blood in sputum">Blood in sputum</option>
+                    <option value="Muscle pain">Muscle pain</option>
+                    <option value="Runny nose">Runny nose</option>
+                    <option value="Throat irritation">Throat irritation</option>
+                    <option value="Irritation in anus">Irritation in anus</option>
+                    <option value="Cramps">Cramps</option>
+                    <option value="Swallen glands">Swallen glands</option>
+                    <option value="Abnormal mensuration">Abnormal mensuration</option>
+                    <option value="Puffy face">Puffy face</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Anxiety">Anxiety</option>
+                </select>
+                <input type="submit" value="Submit">
 
-                        </ul>
+            </form>
+        
+        </div>
+            <footer class="footer-16371">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9 text-center">
+                            <div class="footer-site-logo mb-4">
+                                <a class="navbar-brand" href="index.html">
+                                    <img class="logoimg" src="img/logo.png" alt=""></a>
+                                <br>
+                                <a href="#">Blood-Bloom</a>
+                            </div>
+                            <ul class="list-unstyled nav-links mb-5">
+                                <li><a href="index.html">Home</a></li>
+						<li><a href="aim.html">About Us</a></li>
+						<li><a href="ptracker.html">period diary</a></li>
+						<li><a href="qualitycheck.html">Quality check</a></li>
+						<li><a href="awarness.html">Awarness</a></li>
+						<li><a href="medicine.html">Medicine</a></li>
+						<li><a href="contact.html">contact</a></li>
 
-                        <div class="social mb-4">
-                            <h3>Stay in touch</h3>
-                            <ul class="list-unstyled">
-                                <a href="facebook" class="fb"> <i class="fa fa-facebook"></i></a>
-                                <a href="twitter" class="fb"> <i class="fa fa-twitter"></i></a>
-                                <a href="pinterset" class="pin"> <i class="fa fa-pinterest"></i></a>
-                                <a href="instagram" class="in"> <i class="fa fa-instagram"></i></a>
-                                <a href="google" class="dr"> <i class="fa fa-google"></i></a>
                             </ul>
+
+                            <div class="social mb-4">
+                                <h3>Stay in touch</h3>
+                                <ul class="list-unstyled">
+                                    <a href="facebook" class="fb"> <i class="fa fa-facebook"></i></a>
+                                    <a href="twitter" class="fb"> <i class="fa fa-twitter"></i></a>
+                                    <a href="pinterset" class="pin"> <i class="fa fa-pinterest"></i></a>
+                                    <a href="instagram" class="in"> <i class="fa fa-instagram"></i></a>
+                                    <a href="google" class="dr"> <i class="fa fa-google"></i></a>
+                                </ul>
+                            </div>
+
+                            <div class="copyright">
+                                <p class="mb-0"><small>&copy; Blood-Bloom. All Rights Reserved.</small></p>
+                            </div>
+
+
                         </div>
-
-                        <div class="copyright">
-                            <p class="mb-0"><small>&copy; Blood-Bloom. All Rights Reserved.</small></p>
-                        </div>
-
-
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            </footer>
+            <!-- Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
