@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Bloom</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #37bfd1;
+
+        }
+
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            width: 350px;
+            height: 150px;
+            background-color: #ffffff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .box p a{
+            text-align: center;
+            padding: 10px ;
+            /* padding-left: 30px; */
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .box:hover {
+            background-color: #a5cc93;
+        }
+
+        .boxa {
+            border: 5px solid #ffffff;
+            padding: 40px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text-container {
+            width: 60%;
+            margin-right: 30px;
+            font-size: 30px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            margin: 20px;
+        }
+
+        .image-container {
+
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 90%;
+            border-radius: 10px;
+            width: 110%;
+        }
+        .text-container p{
+            padding-left: 40px;
+        }
+        .text-container h2{
+            padding-right: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img class="logoimg" src="img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">ABOUT US</a>
+                        <div class="dropdown-content">
+                            <a href="aim.html">Aim</a>
+                            <a href="mission.html">Mission</a>
+                            <a href="story.html">Story</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">PERIOD DIARY</a>
+                        <div class="dropdown-content">
+                            <a href="ptracker.html">period tracker</a>
+                            <!-- <a href="qualitycheck.html">Quality check</a> -->
+                            <a href="menopause.html">menupause</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qualitycheck.html">QUALITY CHECK</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">HEALTHCARE</a>
+                        <div class="dropdown-content">
+                            <a href="helpcare.html">Help & care</a>
+                            <a href="medicine.html">Medicine</a>
+                            <a href="pescription.html">pescription</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="awarness.html">AWARNESS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT US</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="evebanner" >
+            <img src="img/banner/helpcare.png" alt="">
+        </div>
+        <div class="box-container" >
+            <div class="box"  >
+                <p><a href="#period">What are periods</a></p>
+            </div>
+            <div class="box">
+                <p><a href="#start">When do periods start</a></p>
+            </div>
+            <div class="box">
+                <p><a href="#cycle">Period Cycle</a></p>
+            </div>
+            <div class="box">
+                <p><a href="#preparation">Preparation</a></p>
+            </div>
+            <div class="box">
+                <p><a href="#mood">Mood change</a></p>
+            </div>
+            <div class="box">
+                <p><a href="#care">How to take care</a></p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="boxa">
+            <div class="text-container">
+                <section id="period">
+                    <h2>What are periods ?</h2>
+                    <p>Your child will go through many changes in puberty. One of the most significant milestones is
+                        your child's first period.<br>
+                        Periods are part of the menstrual cycle. They happen because of changing hormone levels in the
+                        ovaries, which affect the uterus.
+                        Here’s what happens in a menstrual cycle:<br>
+                        <br>
+                        The hormone Oestrogen is produced in the ovaries in cysts or sacs called follicles. The
+                        oestrogen stimulates the follicles to produce eggs. Usually only one egg matures and is
+                        released. When the egg is released, the ovary produces a second hormone, called progesterone.
+                        The egg moves from the ovary to the fallopian tube and travels towards the uterus.
+                        In response to the hormones oestrogen and progesterone, the uterus makes a lining to prepare for
+                        the arrival and implantation of a fertilised egg.
+                        If the egg isn’t fertilised, hormone levels fall. This leads to the lining of the uterus being
+                        shed through the vagina. The lining is blood and other tissue.<br>
+                        <br>
+                        This last step is what we call a ‘period’. Most of the blood and tissue comes out in the first
+                        couple of days, but some people have bleeding for up to seven days. The amount of bleeding
+                        varies.
+                    </p>
+                </section>
+            </div>
+            <div class="image-container">
+                <img src="img/help&care/periods.jpg" alt="Online Webinars Image">
+            </div>
+        </div>
+        <div class="boxa">
+            <div class="image-container">
+                <img src="img/help&care/start.png" alt="Offline School camps Image">
+            </div>
+            <div class="text-container">
+                <section id="start">
+                    <h2>When do periods start?</h2>
+                    <p>Most young people will have their first periods when they’re between 11 and 14½, but anywhere
+                        from 9-16 years is considered normal.
+                        <br>
+                        Periods are likely to start soon if your child has:
+                        <br>
+                        had a major growth spurt
+                        grown some underarm and pubic hair
+                        developed breasts.
+                        <br>
+                        If your child hasn’t started their period by the time they turn 16, it’s a good idea to talk
+                        with your child’s GP. There can be many reasons why periods haven’t started by then, and the GP
+                        can help to rule out any serious problems.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="boxa">
+            <div class="text-container">
+                <section id="cycle">
+                    <h2>Period cycle</h2>
+
+                    <p>The time from the first day of one period to the first day of the next is sometimes called a
+                        ‘cycle’. Cycles are usually between 25 and 35 days. But periods might not be regular for the
+                        first few years, so cycles might change from one period to the next.
+                        <br>
+                        Irregular cycles can be as short as 21 days, and as long as 45 days (or even longer). Young
+                        people who start their periods earlier will usually get a regular cycle more quickly than those
+                        who start their periods later.
+                    </p>
+                    <p>We believe that everyone deserves access to quality healthcare and information, regardless of
+                        their background or circumstances. By working together, we can create a more informed and
+                        empowered society where everyone has the opportunity to lead healthy and fulfilling lives. Join
+                        us in our mission to promote women's health and hygiene today!</p>
+                </section>
+            </div>
+            <div class="image-container">
+                <img src="img/help&care/cycle.jpg" alt="Offline Awareness Camps Image">
+            </div>
+        </div>
+        <div class="boxa">
+            <div class="image-container">
+                <img src="img/help&care/prep.jpg" alt="Collaborations Image">
+            </div>
+            <div class="text-container">
+                <section id="preparation">
+                    <h2>Practical preparation</h2>
+                    <p>Your child will need a supply of sanitary pads, period-proof underpants, tampons and/or a
+                        menstrual cup.
+
+                        Before your child gets their first period, it’s a good idea to show your child:<br>
+
+                        what pads, period-proof underpants, tampons and cups look like
+                        how to use pads, period-proof underpants, tampons and cups
+                        how to dispose of pads and tampons, or rinse period-proof underpants
+                        how to clean a menstrual cup.
+                        <b>You might want to suggest your child carries pads, underpants, tampons or a cup. For example,
+                            they could keep some in a small bag in their school bag and sports bag.</b>
+                        <br>
+                        <br>
+                        <b>Pads, underpants, tampons or a menstrual cup?</b>
+                        <br>
+                        It’s probably easier for your child to start with pads or period-proof underpants before they
+                        try tampons or a menstrual cup.
+                        <br>
+                        Your child can use tampons and cups at any age, but it can take some time and practice to get
+                        used to them.
+                        <br>
+                        When your child is first starting with tampons or a menstrual cup, it might help to practise
+                        between periods, to get used to inserting and removing them. For tampons it can help to put a
+                        bit of lubricant or petroleum jelly on the tip of a tampon so it slides in more easily, or use
+                        water as a lubricant for a menstrual cup. Looking at diagrams of the slope and shape of the
+                        vagina can also help, as can using a mirror while practising.
+
+                        Being comfortable with using tampons or a menstrual cup can be a big help in these busy and
+                        active years.
+                        <br>
+                        <b>How many pads, tampons, period-proof underpants or cups?</b>
+                        <br>
+                        Your child will probably need to use 3-6 sanitary pads or tampons a day, although it might be
+                        fewer on lighter days. In the first couple of days and at night, longer, thicker pads or pads
+                        with wings can be good.
+
+                        Your child will need to change their pad or tampon every 4-8 hours, depending on how heavy or
+                        light the bleeding is.
+
+                        Your child will need to use 1-2 pairs of period-proof underpants each day, depending on how
+                        heavy their bleeding is and how absorbent the pants are. Period-proof underpants need to be
+                        washed and dried between uses, so your child might need several pairs to get through their
+                        period.
+
+                        Your child will need 1-2 menstrual cups. Cups can be worn for up to 12 hours but might need to
+                        be emptied and washed more often, depending on how heavy bleeding is. They need rinsing out
+                        between uses.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="boxa">
+            <div class="text-container">
+                <section id="mood">
+                    <h2>Mood change</h2>
+                    <p>It’s good for your child to keep track of their periods with an app, calendar or diary. If your
+                        child’s periods are fairly regular, an app or calendar can help your child know when their
+                        period is likely to come. This way your child can prepare for things like sleepovers, school
+                        camps or swimming carnivals.</p>
+                </section>
+            </div>
+            <div class="image-container">
+                <img src="img/help&care/moof.jpg" alt="Online Webinars Image">
+            </div>
+        </div>
+        <div class="boxa">
+            <div class="image-container">
+                <img src="img/help&care/care.png" alt="Offline School Camps Image">
+            </div>
+            <div class="text-container">
+                <section id="care">
+                    <h2>How to take care?</h2>
+                    <p>When your child’s period is coming, they might have a range of physical symptoms, including sore
+                        breasts, pimples and greasy hair. Your child might also have a sore tummy, feel sick or have
+                        diarrhoea.
+                        <br>
+                        <b>
+                            Period pain and these associated symptoms are common. If your child gets a sore tummy, back
+                            or legs before or during their period, your child could try:</b>
+                        <br>
+                        <br>
+                        Taking pain medication<br>
+                        Putting a hot water bottle on their lower stomach<br>
+                        Walking or other light exercise<br>
+                        Eating smaller meals more often (to reduce stomach swelling and soreness)<br>
+                        Resting and relaxing, particularly with their legs elevated, or lying on one side with knees
+                        bent<br>
+                        Lightly massaging the lower stomach<br>
+                        Having warm drinks like hot milk or herbal tea.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-16371">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 text-center">
+                    <div class="footer-site-logo mb-4">
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logoimg" src="img/logo.png" alt=""></a>
+                        <br>
+                        <a href="#">Blood-Bloom</a>
+                    </div>
+                    <ul class="list-unstyled nav-links mb-5">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">period diary</a></li>
+                        <li><a href="#">Quality check</a></li>
+                        <li><a href="#">Awarness</a></li>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">contact</a></li>
+
+                    </ul>
+
+                    <div class="social mb-4">
+                        <h3>Stay in touch</h3>
+                        <ul class="list-unstyled">
+                            <a href="facebook" class="fb"> <i class="fa fa-facebook"></i></a>
+                            <a href="twitter" class="fb"> <i class="fa fa-twitter"></i></a>
+                            <a href="pinterset" class="pin"> <i class="fa fa-pinterest"></i></a>
+                            <a href="instagram" class="in"> <i class="fa fa-instagram"></i></a>
+                            <a href="google" class="dr"> <i class="fa fa-google"></i></a>
+                        </ul>
+                    </div>
+
+                    <div class="copyright">
+                        <p class="mb-0"><small>&copy; Blood-Bloom. All Rights Reserved.</small></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
